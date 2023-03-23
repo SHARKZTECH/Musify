@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.res.ColorStateList;
+import android.graphics.BlurMaskFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -46,6 +47,9 @@ public class HomeActivity extends AppCompatActivity {
                 btnLiked.setVisibility(View.VISIBLE);
                 btnRecent.setVisibility(View.VISIBLE);
 
+                binding.homeLayout.setAlpha(0.1f);
+               binding.btmAppbar.setAlpha(0.1f);
+
                 binding.btnFab.extend();
                 binding.btnFab.setIcon(getDrawable(R.drawable.unfold));
                 binding.btnFab.setIconTint(getResources().getColorStateList(R.color.white));
@@ -56,6 +60,9 @@ public class HomeActivity extends AppCompatActivity {
                 btnArtist.setVisibility(View.GONE);
                 btnLiked.setVisibility(View.GONE);
                 btnRecent.setVisibility(View.GONE);
+
+                binding.homeLayout.setAlpha(1);
+                binding.btmAppbar.setAlpha(1);
 
                 binding.btnFab.shrink();
                 binding.btnFab.setIcon(getDrawable(R.drawable.sp_logo));
