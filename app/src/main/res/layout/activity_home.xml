@@ -7,7 +7,7 @@
     tools:context=".HomeActivity"
     android:background="@color/bg_1">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp">
@@ -47,7 +47,8 @@
             android:id="@+id/recyclerDiscover"
             android:layout_below="@id/discover"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
 
 
         <TextView
@@ -63,10 +64,10 @@
             android:id="@+id/recyclerPlaylists"
             android:layout_below="@id/playlists"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"/>
     </RelativeLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"

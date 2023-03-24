@@ -23,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView playlistsRecycler,discoverRecycler;
     PlayListAdapter playListAdapter;
     ArrayList<PlayList> playLists;
+    DiscoverAdapter discoverAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +42,17 @@ public class HomeActivity extends AppCompatActivity {
 
         getPlayLists();
 
-        playListAdapter=new PlayListAdapter(this,playLists);
-        playlistsRecycler.setLayoutManager(new GridLayoutManager(this,2 ));
-        playlistsRecycler.setAdapter(playListAdapter);
-
+        discoverAdapter=new DiscoverAdapter(this,playLists);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
         discoverRecycler.setLayoutManager(linearLayoutManager);
-        discoverRecycler.setAdapter(playListAdapter);
+        discoverRecycler.setAdapter(discoverAdapter);
+
+        playListAdapter=new PlayListAdapter(this,playLists);
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(this,2);
+        gridLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        playlistsRecycler.setLayoutManager(gridLayoutManager);
+        playlistsRecycler.setAdapter(playListAdapter);
 
     }
     private void getPlayLists(){
