@@ -7,6 +7,10 @@
     tools:context=".HomeActivity"
     android:background="@color/bg_1">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <RelativeLayout
         android:id="@+id/homeLayout"
         android:layout_width="match_parent"
@@ -61,7 +65,7 @@
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
-
+    </ScrollView>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
