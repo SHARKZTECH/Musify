@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class PlayListAdapter extends RecyclerView.Adapter<PlayListAdapter.MyVievHolder> {
@@ -34,6 +36,7 @@ public class PlayListAdapter extends RecyclerView.Adapter<PlayListAdapter.MyViev
         PlayList playList=playLists.get(position);
         holder.name.setText(playList.getName());
         holder.owner.setText(playList.getOwner());
+        Glide.with(holder.itemView.getContext()).load(playList.getImage()).into(holder.image);
 
     }
 

@@ -52,15 +52,18 @@ public class HomeActivity extends AppCompatActivity {
 
     }
     private void getPlayLists(){
-        playLists.add(new PlayList("On Repeat","Spotify",R.drawable.liked_songs));
+        playLists.add(new PlayList("On Repeat","Spotify",R.drawable.repeat_));
         playLists.add(new PlayList("Liked","Spotify",R.drawable.liked_songs));
-        playLists.add(new PlayList("Discover Weekly","Spotify",R.drawable.liked_songs));
-        playLists.add(new PlayList("Sharkztech","Sharkz",R.drawable.liked_songs));
+        playLists.add(new PlayList("Discover Weekly","Spotify", R.drawable.discover_));
+        playLists.add(new PlayList("Sharkztech","Sharkz", R.drawable.playlist));
 
-        playLists.add(new PlayList("On Repeat","Spotify",R.drawable.liked_songs));
+
+        playLists.add(new PlayList("Discover Weekly","Spotify", R.drawable.discover_));
+        playLists.add(new PlayList("On Repeat","Spotify",R.drawable.repeat_));
         playLists.add(new PlayList("Liked","Spotify",R.drawable.liked_songs));
-        playLists.add(new PlayList("Discover Weekly","Spotify",R.drawable.liked_songs));
-        playLists.add(new PlayList("Sharkztech","Sharkz",R.drawable.liked_songs));
+        playLists.add(new PlayList("Sharkztech","Sharkz", R.drawable.playlist));
+
+
     }
     private void fabExtend(){
 
