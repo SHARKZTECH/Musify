@@ -2,6 +2,7 @@ package com.example.musify;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
@@ -44,8 +45,18 @@ public class HomeActivity extends AppCompatActivity {
         playlistsRecycler.setLayoutManager(new GridLayoutManager(this,2 ));
         playlistsRecycler.setAdapter(playListAdapter);
 
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        discoverRecycler.setLayoutManager(linearLayoutManager);
+        discoverRecycler.setAdapter(playListAdapter);
+
     }
     private void getPlayLists(){
+        playLists.add(new PlayList("On Repeat","Spotify",R.drawable.liked_songs));
+        playLists.add(new PlayList("Liked","Spotify",R.drawable.liked_songs));
+        playLists.add(new PlayList("Discover Weekly","Spotify",R.drawable.liked_songs));
+        playLists.add(new PlayList("Sharkztech","Sharkz",R.drawable.liked_songs));
+
         playLists.add(new PlayList("On Repeat","Spotify",R.drawable.liked_songs));
         playLists.add(new PlayList("Liked","Spotify",R.drawable.liked_songs));
         playLists.add(new PlayList("Discover Weekly","Spotify",R.drawable.liked_songs));
