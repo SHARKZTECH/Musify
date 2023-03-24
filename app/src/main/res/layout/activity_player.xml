@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PlayerActivity"
+    android:background="@color/bg_1"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/btnShrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_down"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:id="@+id/playListName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liked songs"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <ImageView
+        android:id="@+id/btnMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/more_horiz"
+        android:layout_alignParentRight="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/songImgCard"
+        android:layout_below="@id/playListName"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginVertical="20dp">
+        <ImageView
+            android:id="@+id/songImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/liked_songs"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/songName"
+        android:layout_below="@id/songImgCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blinding Lights"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/songArtist"
+        android:layout_below="@id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Weeknd After Hours"/>
+    <ImageView
+        android:id="@+id/btnLikeToggle"
+        android:layout_below="@id/songImgCard"
+        android:layout_alignParentRight="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+        android:src="@drawable/liked"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songArtist"
+        android:layout_marginTop="20dp"
+        android:scaleY="1.5" />
+    <TextView
+        android:id="@+id/currentDuration"
+        android:layout_below="@id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/remDuration"
+        android:layout_below="@id/seekBar"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-2:45"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="13dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/playerControls"
+        android:layout_below="@id/remDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/btnShuffle"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shuffle"/>
+        <ImageView
+            android:id="@+id/btnPrev"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:src="@drawable/skip_previous"/>
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="50dp"
+            android:src="@drawable/pause"/>
+        <ImageView
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:src="@drawable/skip_next"/>
+        <ImageView
+            android:id="@+id/btnRepeat"
+            android:layout_width="0dp"
+            android:layout_weight=".2"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repeat"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_below="@id/playerControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/devices"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"/>
+    <ImageView
+        android:layout_below="@id/playerControls"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"/>
+
+</RelativeLayout>

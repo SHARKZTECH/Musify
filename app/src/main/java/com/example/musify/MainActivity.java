@@ -13,8 +13,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btn=findViewById(R.id.btnHomeActivity);
+        Button btn1=findViewById(R.id.btnPlayerActivity);
         btn.setOnClickListener(view -> {
             startActivity(new Intent(this,HomeActivity.class));
+        });
+        btn1.setOnClickListener(view -> {
+            startActivity(new Intent(this,PlayerActivity.class));
         });
     }
 }
