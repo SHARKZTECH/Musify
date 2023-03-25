@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.musify.databinding.ActivityHomeBinding;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     PlayListAdapter playListAdapter;
     ArrayList<PlayList> playLists;
     DiscoverAdapter discoverAdapter;
+    ExtendedFloatingActionButton btnFab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,15 +34,17 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(rootView);
 
         playLists=new ArrayList<>();
-        btnAlbum=binding.btnAlbum;
-        btnArtist=binding.btnArtist;
-        btnLiked=binding.btnLiked;
-        btnRecent=binding.btnRecent;
+        btnFab=binding.btmAppbar.btnFab;
+        btnAlbum=binding.btmAppbar.btnAlbum;
+        btnArtist=binding.btmAppbar.btnArtist;
+        btnLiked=binding.btmAppbar.btnLiked;
+        btnRecent=binding.btmAppbar.btnRecent;
         playlistsRecycler=binding.recyclerPlaylists;
         discoverRecycler=binding.recyclerDiscover;
         fabExtend();
 
         getPlayLists();
+
 
         discoverAdapter=new DiscoverAdapter(this,playLists);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
@@ -50,9 +54,10 @@ public class HomeActivity extends AppCompatActivity {
 
         playListAdapter=new PlayListAdapter(this,playLists);
         GridLayoutManager gridLayoutManager=new GridLayoutManager(this,2);
-        gridLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        gridLayoutManager.setOrientation(RecyclerView.VERTICAL);
         playlistsRecycler.setLayoutManager(gridLayoutManager);
         playlistsRecycler.setAdapter(playListAdapter);
+
 
     }
     private void getPlayLists(){
@@ -77,9 +82,9 @@ public class HomeActivity extends AppCompatActivity {
         btnRecent.setVisibility(View.GONE);
 
         isAllFabVisible=false;
-        binding.btnFab.shrink();
+        btnFab.shrink();
 
-        binding.btnFab.setOnClickListener(view->{
+        btnFab.setOnClickListener(view->{
             if(!isAllFabVisible){
                 btnAlbum.setVisibility(View.VISIBLE);
                 btnArtist.setVisibility(View.VISIBLE);
@@ -87,12 +92,12 @@ public class HomeActivity extends AppCompatActivity {
                 btnRecent.setVisibility(View.VISIBLE);
 
                 binding.homeLayout.setAlpha(0.1f);
-               binding.btmAppbar.setAlpha(0.1f);
+                binding.btmAppbar.btmAppbar.setAlpha(0.1f);
 
-                binding.btnFab.extend();
-                binding.btnFab.setIcon(getDrawable(R.drawable.unfold));
-                binding.btnFab.setIconTint(getResources().getColorStateList(R.color.white));
-                binding.btnFab.setBackgroundTintList(getColorStateList(R.color.fab_bg2));
+               btnFab.extend();
+               btnFab.setIcon(getDrawable(R.drawable.unfold));
+               btnFab.setIconTint(getResources().getColorStateList(R.color.white));
+               btnFab.setBackgroundTintList(getColorStateList(R.color.fab_bg2));
                 isAllFabVisible=true;
             }else{
                 btnAlbum.setVisibility(View.GONE);
@@ -101,12 +106,12 @@ public class HomeActivity extends AppCompatActivity {
                 btnRecent.setVisibility(View.GONE);
 
                 binding.homeLayout.setAlpha(1);
-                binding.btmAppbar.setAlpha(1);
+                binding.btmAppbar.btmAppbar.setAlpha(1);
 
-                binding.btnFab.shrink();
-                binding.btnFab.setIcon(getDrawable(R.drawable.sp_logo));
-                binding.btnFab.setIconTint(getResources().getColorStateList(R.color.fab_bg1));
-                binding.btnFab.setBackgroundTintList(getColorStateList(R.color.bg_1));
+                btnFab.shrink();
+                btnFab.setIcon(getDrawable(R.drawable.sp_logo));
+               btnFab.setIconTint(getResources().getColorStateList(R.color.fab_bg1));
+               btnFab.setBackgroundTintList(getColorStateList(R.color.bg_1));
 
                 isAllFabVisible=false;
             }

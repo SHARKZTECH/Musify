@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="60dp"
+android:background="@drawable/min_player_bg"
+android:padding="10dp"
+android:layout_marginHorizontal="10dp"
+android:elevation="10dp">
+<ImageView
+    android:id="@+id/image"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:src="@drawable/liked_songs"
+    android:layout_marginRight="20dp"/>
+<TextView
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Overthinking(with 24Gold)"
+    android:layout_toRightOf="@id/image"/>
+<TextView
+    android:id="@+id/songArtist"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Mabel"
+    android:layout_toRightOf="@id/image"
+    android:layout_alignParentBottom="true"/>
+<ImageView
+    android:id="@+id/btnLike"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/liked"
+    android:layout_toLeftOf="@id/btnPlay"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="10dp"/>
+<ImageView
+    android:id="@+id/btnPlay"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:src="@drawable/pause"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true" />
+</RelativeLayout>

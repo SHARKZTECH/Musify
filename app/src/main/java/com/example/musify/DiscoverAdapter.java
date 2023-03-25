@@ -36,7 +36,7 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.MyView
         PlayList playList=playLists.get(position);
         holder.name.setText(playList.getName());
         holder.owner.setText(playList.getOwner());
-//        Glide.with(holder.itemView.getContext()).load(playList.getImage()).into(holder.image);
+        Glide.with(holder.itemView.getContext()).load(playList.getImage()).into(holder.image);
 
     }
 

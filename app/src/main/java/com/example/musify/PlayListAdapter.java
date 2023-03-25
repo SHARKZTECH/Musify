@@ -36,7 +36,7 @@ public class PlayListAdapter extends RecyclerView.Adapter<PlayListAdapter.MyViev
         PlayList playList=playLists.get(position);
         holder.name.setText(playList.getName());
         holder.owner.setText(playList.getOwner());
-//        Glide.with(holder.itemView.getContext()).load(playList.getImage()).into(holder.image);
+        Glide.with(holder.itemView.getContext()).load(playList.getImage()).into(holder.image);
 
     }
 
