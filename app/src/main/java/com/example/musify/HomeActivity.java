@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.BlurMaskFilter;
 import android.os.Bundle;
@@ -58,6 +59,10 @@ public class HomeActivity extends AppCompatActivity {
         playlistsRecycler.setLayoutManager(gridLayoutManager);
         playlistsRecycler.setAdapter(playListAdapter);
 
+        binding.minPlayer.minPlayer.setOnClickListener(view -> {
+            startActivity(new Intent(this,PlayerActivity.class));
+        });
+
 
     }
     private void getPlayLists(){
@@ -93,6 +98,8 @@ public class HomeActivity extends AppCompatActivity {
 
                 binding.homeLayout.setAlpha(0.1f);
                 binding.btmAppbar.btmAppbar.setAlpha(0.1f);
+                binding.minPlayer.minPlayer.setAlpha(.1f);
+                binding.minPlayer.minPlayer.setBottom(210);
 
                btnFab.extend();
                btnFab.setIcon(getDrawable(R.drawable.unfold));
@@ -107,6 +114,8 @@ public class HomeActivity extends AppCompatActivity {
 
                 binding.homeLayout.setAlpha(1);
                 binding.btmAppbar.btmAppbar.setAlpha(1);
+                binding.minPlayer.minPlayer.setAlpha(1);
+                binding.minPlayer.minPlayer.setBottom(100);
 
                 btnFab.shrink();
                 btnFab.setIcon(getDrawable(R.drawable.sp_logo));
