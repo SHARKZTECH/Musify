@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayListContentActivity"
+    android:background="@color/bg_1">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/arrow_down"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/playListName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liked songs"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginVertical="15dp"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/arrow_down"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playListName"
+        android:layout_marginHorizontal="20dp"/>
+
+    <include
+        android:id="@+id/minPlayer"
+        layout="@layout/min_player"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"/>
+    <include
+        android:id="@+id/btmAppbar"
+        layout="@layout/bottom_app_bar"/>
+
+</RelativeLayout>
