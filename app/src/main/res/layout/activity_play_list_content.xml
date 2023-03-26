@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".PlayListContentActivity"
     android:background="@color/bg_1">
+
+    <RelativeLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
@@ -32,6 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/playListName"
         android:layout_marginHorizontal="20dp"/>
+    </RelativeLayout>
+
 
     <include
         android:id="@+id/minPlayer"
@@ -39,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"/>
+        android:layout_marginBottom="100dp"/>
     <include
         android:id="@+id/btmAppbar"
         layout="@layout/bottom_app_bar"/>
