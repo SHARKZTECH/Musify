@@ -79,7 +79,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
-    private void fabExtend(){
+    public void fabExtend(){
 
         btnAlbum.setVisibility(View.GONE);
         btnArtist.setVisibility(View.GONE);
