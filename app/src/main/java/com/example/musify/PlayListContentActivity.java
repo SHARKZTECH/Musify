@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.musify.databinding.ActivityPlayListContentBinding;
@@ -42,6 +43,11 @@ public class PlayListContentActivity extends AppCompatActivity {
         btnArtist=binding.btmAppbar.btnArtist;
         btnLiked=binding.btmAppbar.btnLiked;
         btnRecent=binding.btmAppbar.btnRecent;
+        ImageView btnBack=binding.btnBack;
+
+        btnBack.setOnClickListener(view -> {
+            super.onBackPressed();
+        });
 
         fabExtend();
 
