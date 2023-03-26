@@ -1,6 +1,7 @@
 package com.example.musify;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,10 @@ public class DiscoverAdapter extends RecyclerView.Adapter<DiscoverAdapter.MyView
         holder.name.setText(playList.getName());
         holder.owner.setText(playList.getOwner());
         Glide.with(holder.itemView.getContext()).load(playList.getImage()).into(holder.image);
+
+        holder.itemView.setOnClickListener(view -> {
+            context.startActivity(new Intent(context,PlayListContentActivity.class));
+        });
 
     }
 

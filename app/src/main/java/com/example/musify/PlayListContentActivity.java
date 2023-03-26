@@ -27,8 +27,8 @@ public class PlayListContentActivity extends AppCompatActivity {
         View rootView=binding.getRoot();
         setContentView(rootView);
 
-        HomeActivity homeActivity=new HomeActivity();
-        homeActivity.fabExtend();
+//        HomeActivity homeActivity=new HomeActivity();
+//        homeActivity.fabExtend();
 
         songs=new ArrayList<>();
         recyclerView=binding.recycler;
