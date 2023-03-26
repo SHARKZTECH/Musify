@@ -62,6 +62,17 @@ public class PlayListContentActivity extends AppCompatActivity {
         songs.add(new Song("Ugly","GALYE"));
         songs.add(new Song("Ugly","GALYE"));
         songs.add(new Song("Ugly","GALYE"));
+
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
+        songs.add(new Song("Ugly","GALYE"));
     }
     public void fabExtend(){
 
