@@ -19,7 +19,7 @@ public class PlayerActivity extends AppCompatActivity {
         setContentView(rootView);
 
         binding.btnShrink.setOnClickListener(view -> {
-            startActivity(new Intent(this,HomeActivity.class));
+            super.onBackPressed();
         });
     }
 }

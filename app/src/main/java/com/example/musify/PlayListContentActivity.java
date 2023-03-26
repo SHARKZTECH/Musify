@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +48,13 @@ public class PlayListContentActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(view -> {
             super.onBackPressed();
+        });
+
+        binding.minPlayer.minPlayer.setOnClickListener(view -> {
+            startActivity(new Intent(this,PlayerActivity.class));
+        });
+        binding.btmAppbar.btnHome.setOnClickListener(view -> {
+            startActivity(new Intent(this,HomeActivity.class));
         });
 
         fabExtend();
